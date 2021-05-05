@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../../../includes/header.ejs %>
+</head>
+
+<body>
+  <% include ../../../includes/nav.ejs %>
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1><%= title %></h1>
+  </div>
+</div>
+<div class="container">
+    <div>
+        <!-- Form for requirement 01 -->
+        <form action="/prove01/addUser" method="POST">
+            <label for="newUser">New Username</label><br>
+            <input type="text" name="newUser">
+            <button type="submit">Add User</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
