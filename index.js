@@ -13,12 +13,15 @@
 // Our initial setup (package requires, port number setup)
 const express = require('express');
 const bodyParser = require('body-parser');
+const fs = require("fs");
+const ejs = require("ejs");
+
 const path = require('path');
 const PORT = process.env.PORT || 5000 // So we can run on heroku || (OR) localhost:5000
 
 const app = express();
 
-// Route setup. You can implement more in the future!
+// Route setup.
 const ta01Routes = require('./routes/team_activities/ta01');
 const ta02Routes = require('./routes/team_activities/ta02');
 const ta03Routes = require('./routes/team_activities/ta03'); 
@@ -38,7 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')))
    .use(bodyParser({extended: false})) // For parsing the body of a POST
    .use('/ta01', ta01Routes)
    .use('/ta02', ta02Routes) 
-   .use('/ta03', ta03Routes) 
+   .get('/ta03', ta03Routes.processJson) 
    .use('/ta04', ta04Routes)
    .use('/prove01', prove01Routes)
    .use('/prove02', prove02Routes)
