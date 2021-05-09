@@ -6,21 +6,22 @@
         <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
       </li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Team Activities <span class="caret"></span></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Shop <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li class="<%= path === '/ta01' ? 'active' : ''%>"><a href="/ta01">TA01</a></li>
-            <li class="<%= path === '/ta02' ? 'active' : ''%>"><a href="/ta02">TA02</a></li>
-            <li class="<%= path === '/ta03' ? 'active' : ''%>"><a href="/ta03">TA03</a></li>
-            <li class="<%= path === '/ta04' ? 'active' : ''%>"><a href="/ta04">TA04</a></li>
+            <li class="<%= path === '/browser-products' ? 'active' : ''%>"><a href="/shopRoutes/browser-products">Browser Products</a></li>
+            <li class="<%= path === '/shop' ? 'active' : ''%>"><a href="/shopRoutes/shop">Shop</a></li>
+            <li class="<%= path === '/ta04' ? 'active' : ''%>"><a href="/ta04">Cart</a></li>
+            <li class="<%= path === '/ta04' ? 'active' : ''%>"><a href="/ta04">Checkout</a></li>
           </ul>
       </li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Prove Activities <span class="caret"></span></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> User <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li class="<%= path === '/prove01' ? 'active' : ''%>"><a href="/prove01">Prove01</a></li>
-            <li class="<%= path === '/prove02' ? 'active' : ''%>"><a href="/prove02/add_book">Prove02</a></li>
-            <li class="<%= path === '/prove03' ? 'active' : ''%>"><a href="/prove03">Prove03</a></li>
-            <li class="<%= path === '/prove04' ? 'active' : ''%>"><a href="/prove04">Prove04</a></li>
+            <li class="<%= path === '/prove02' ? 'active' : ''%>"><a href="/prove02/add_book">Login</a></li>
+            <li class="<%= path === '/userRoutes' ? 'active' : ''%>"><a href="/userRoutes">Sign Up</a></li>
+            <li class="<%= path === '/prove04' ? 'active' : ''%>"><a href="/prove04">My Products</a></li>
+            <li class="<%= path === '/add-product' ? 'active' : ''%>"><a href="/shopRoutes/add-product">Add Product</a></li>
+            <!-- <li class="<%= path === '/prove04' ? 'active' : ''%>"><a href="/prove04">Edit Product</a></li> -->
           </ul>
       </li>
     </ul>
