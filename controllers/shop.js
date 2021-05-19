@@ -65,6 +65,7 @@ exports.postCart = (req, res, next) => {
       return req.user.addToCart(product);
     })
     .then(result => {
+      console.log(result);
       res.redirect('/cart');
     });
 };
@@ -85,17 +86,17 @@ exports.postOrder = (req, res, next) => {
     .execPopulate()
     .then(user => {
       const products = user.cart.items.map(i => {
-        return{quantity: i.quantity, product: { ...i.productId._doc } };
-      }); 
+        return { quantity: i.quantity, product: { ...i.productId._doc } };
+      });
       const order = new Order({
         user: {
-          name: req.user.name,
+          email: req.user.email,
           userId: req.user
         },
         products: products
       });
       return order.save();
-    })  
+    })
     .then(result => {
       return req.user.clearCart();
     })
@@ -106,14 +107,13 @@ exports.postOrder = (req, res, next) => {
 };
 
 exports.getOrders = (req, res, next) => {
-  Order
-  .find({"user.userId": req.user._id })
-  .then(orders => {
-    res.render('shop/orders', {
-      path: '/orders',
-      pageTitle: 'Your Orders',
-      orders: orders
-    });
-  })
+  Order.find({ 'user.userId': req.user._id })
+    .then(orders => {
+      res.render('shop/orders', {
+        path: '/orders',
+        pageTitle: 'Your Orders',
+        orders: orders
+      });
+    })
     .catch(err => console.log(err));
 };
