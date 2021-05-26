@@ -33,11 +33,12 @@ form {
 
 .main-header {
   width: 100%;
-  height: 3.5rem;
-  background-color: #00695c;
+  height: 10rem;
+  background-color: #1B79AF;
   padding: 0 1.5rem;
   display: flex;
   align-items: center;
+  font-size:x-large;
 }
 
 .main-header__nav {
@@ -167,6 +168,12 @@ form {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
+  background: rgb(245, 245, 245);
+  padding: 20px;
+}
+
+.product-item{
+  background: white;
 }
 
 .card {
@@ -208,8 +215,8 @@ form {
   padding: 0.25rem 1rem;
   text-decoration: none;
   font: inherit;
-  border: 1px solid #00695c;
-  color: #00695c;
+  border: 1px solid #1baf9b;
+  color: #1baf9b;
   background: white;
   border-radius: 3px;
   cursor: pointer;
@@ -217,10 +224,10 @@ form {
 
 .btn:hover,
 .btn:active {
-  background-color: #00695c;
+  background-color: #1baf9b;
   color: white;
 }
-
+ 
 .btn.danger {
   color: red;
   border-color: red;
@@ -246,6 +253,57 @@ form {
   border-color: red;
   background: rgb(255, 176, 176);
   color: red;
+}
+
+.jumbotron {
+  background: 
+  /* top, transparent red, faked with gradient */ 
+  linear-gradient(
+    rgba(0, 101, 189, 0.25), 
+    rgba(0, 101, 189, 0.45)
+  ),
+  /* bottom, image */
+  url("https://cdnb.artstation.com/p/media_assets/images/images/000/700/933/large/GSO_render_001.jpg?1608554834");
+  color: white;
+  padding-bottom: 80px; 
+}
+
+.jumbotron .btn-primary {
+  background: #845ac7;
+  border-color: #845ac7; 
+}
+
+.jumbotron .btn-primary:hover {
+  background: #7646c1; 
+}
+  
+.jumbotron p {
+  color: orange;
+  max-width: 75%;
+  margin: 1em auto 2em; 
+}
+  
+.navbar + .jumbotron {
+  margin-top: -20px; 
+}
+  
+.jumbotron .lang-logo {
+  display: block;
+  background: #B01302;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: 2px solid white; 
+}
+.jumbotron .lang-logo img {
+  max-width: 100%; 
+}
+
+.logo {
+  width: 10rem;
+  height: 10rem;
 }
 
 @media (min-width: 768px) {

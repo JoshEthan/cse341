@@ -1,6 +1,10 @@
 .login-form {
-  width: 20rem;
+  width: 50rem;
   max-width: 90%;
   margin: auto;
   display: block;
+}
+
+.form-control{
+  height: auto;
 }
